@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="body-overlay"></div>
+
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <img src="img/logo.png" class="img-fluid" />
+        </div>
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="#" class="dashboard"
+              ><i class="material-icons">dashboard</i><span>Dashboard</span></a
+            >
+          </li>
+
+          <div class="small-screen navbar-display">
+            <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
+              <a
+                href="#homeSubmenu0"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+              >
+                <i class="material-icons">notifications</i
+                ><span> 2 notification</span></a
+              >
+              <ul class="collapse list-unstyled menu" id="homeSubmenu0">
+                <li>
+                  <a href="#">You have 3 new message</a>
+                </li>
+                <li>
+                  <a href="#">You have 15 new orders</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+              <a href="#"
+                ><i class="material-icons">apps</i><span>apps</span></a
+              >
+            </li>
+
+            <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+              <a href="#"
+                ><i class="material-icons">person</i><span>user</span></a
+              >
+            </li>
+
+            <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+              <a href="#"
+                ><i class="material-icons">settings</i><span>setting</span></a
+              >
+            </li>
+          </div>
+
+          <li class="dropdown">
+            <a
+              href="#catalogPage"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">dns</i><span>Catalog</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="catalogPage">
+              <li>
+                <a href="#">Book List</a>
+              </li>
+              <li>
+                <a href="#">Category List</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#orderPage"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">shopping_cart</i><span>Orders</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="orderPage">
+              <li>
+                <a href="#">Orders List</a>
+              </li>
+              <li>
+                <a href="#">Orders Details</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#marketingPage"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">campaign</i>
+
+              <span>Marketing</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="marketingPage">
+              <li>
+                <a href="#">Coupons List</a>
+              </li>
+              <li>
+                <a href="#">Coupon</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a
+              href="#inboxPage"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">mail</i><span>Inbox</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="inboxPage">
+              <li>
+                <a href="#">List</a>
+              </li>
+              <li>
+                <a href="#">Conversation</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">folder</i><span>File Manager</span></a
+            >
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">attach_money</i
+              ><span>Pricing Table</span></a
+            >
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">library_books</i
+              ><span>Calender</span></a
+            >
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">trending_up</i
+              ><span>Analytics</span></a
+            >
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#table"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">table_view</i><span>Tables</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="table">
+              <li>
+                <a href="#">Basic Tables</a>
+              </li>
+              <li>
+                <a href="#">Data Tables</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#authentication"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <i class="material-icons">lock</i><span>Authentication</span></a
+            >
+            <ul class="collapse list-unstyled menu" id="authentication">
+              <li>
+                <a href="#">Reset Password</a>
+              </li>
+              <li>
+                <a href="#">Verify Account</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <div class="top-navbar">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button
+                type="button"
+                id="sidebarCollapse"
+                class="d-xl-block d-lg-block d-md-mone d-none"
+              >
+                <span class="material-icons">arrow_back_ios</span>
+              </button>
+
+              <div class="search">
+                <form class="form-inline">
+                  <input
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <i class="material-icons">search</i>
+                </form>
+              </div>
+
+              <button
+                class="d-inline-block d-lg-none ml-auto more-button"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="material-icons">more_vert</span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none"
+                id="navbarSupportedContent"
+              >
+                <ul class="nav navbar-nav ml-auto">
+                  <li class="dropdown nav-item active">
+                    <a href="#" class="nav-link" data-toggle="dropdown">
+                      <span class="material-icons">notifications</span>
+                      <span class="notification">2</span>
+                    </a>
+                    <ul class="dropdown-menu alert">
+                      <li>
+                        <a href="#">You have 3 new message</a>
+                      </li>
+                      <li>
+                        <a href="#">You have 15 new orders</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown nav-item">
+                    <a href="#" class="nav-link" data-toggle="dropdown">
+                      <span class="material-icons">person</span>
+                    </a>
+                    <ul class="dropdown-menu alert">
+                      <li>
+                        <a href="#">Profile</a>
+                      </li>
+                      <li>
+                        <a href="#">Settings</a>
+                      </li>
+                      <li>
+                        <a href="#">Sign out</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="main-content">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header">
+                  <div class="icon icon-warning">
+                    <span class="material-icons">real_estate_agent</span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="category"><strong>Total Sales</strong></p>
+                  <h3 class="card-title">170,340</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-info">info</i> See detailed
+                    report
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header">
+                  <div class="icon icon-rose">
+                    <span class="material-icons">shopping_cart</span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="category"><strong>Total Orders</strong></p>
+                  <h3 class="card-title">2102</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">local_offer</i> Product-wise sales
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header">
+                  <div class="icon icon-success">
+                    <span class="material-icons"> attach_money </span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="category"><strong>Revenue</strong></p>
+                  <h3 class="card-title">$23,100</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">date_range</i> Weekly sales
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header">
+                  <div class="icon icon-info">
+                    <span class="material-icons"> follow_the_signs </span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="category"><strong>Customers</strong></p>
+                  <h3 class="card-title">+1245</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">update</i> Just Updated
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12">
+              <div class="data-table">
+                <div class="table-head">Recent Orders</div>
+                <table class="table justify-content-center">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Satus</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2157</th>
+                      <td>Completed</td>
+                      <td>Soumya Chakraborty</td>
+                      <td>1023</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5982</th>
+                      <td>Pending</td>
+                      <td>Abhijit Das</td>
+                      <td>497</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9264</th>
+                      <td>Cancelled</td>
+                      <td>Partho Dey</td>
+                      <td>765</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4765</th>
+                      <td>Completed</td>
+                      <td>Rina Sen</td>
+                      <td>1156</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7852</th>
+                      <td>Pending</td>
+                      <td>Subarna Banerjee</td>
+                      <td>624</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6723</th>
+                      <td>Cancelled</td>
+                      <td>Meera Roy</td>
+                      <td>828</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1987</th>
+                      <td>Completed</td>
+                      <td>Sanjib Ray</td>
+                      <td>624</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3479</th>
+                      <td>Pending</td>
+                      <td>Aishwarya Basu</td>
+                      <td>1108</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4905</th>
+                      <td>Completed</td>
+                      <td>Shreya DasAbhijit Das</td>
+                      <td>1300</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8246</th>
+                      <td>Completed</td>
+                      <td>Priyanka BoseAbhijit Das</td>
+                      <td>256</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="pie-chart">
+                <div class="chart-head">Sales</div>
+                <div>
+                  <canvas
+                    id="myChart"
+                    style="width: 100%; max-width: 700px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <p class="copyright d-flex justify-content-center">
+                    All rights reserved by &copySupti Pramanik 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $('#content').toggleClass('active');
+        });
+
+        $('.more-button,.body-overlay').on('click', function () {
+          $('#sidebar,.body-overlay').toggleClass('show-nav');
+        });
+      });
+
+      const ctx = document.getElementById('myChart');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['March', 'April', 'May', 'June', 'July', 'August'],
+          datasets: [
+            {
+              label: '# of Votes',
+              data: [14, 16, 13, 16, 17, 19],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
